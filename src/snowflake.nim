@@ -24,7 +24,7 @@ const
   MachineId: int64 = 0     # max: 2 ^ MachineBits - 1
 
 var
-  lock {.global.}: Lock 
+  lock: Lock 
   lastStmp, sequence {.global, guard: lock.}: int64
 
 proc getCurrentTimeMs(): int64 = 
